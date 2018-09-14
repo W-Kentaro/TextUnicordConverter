@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="robots" content="ALL">
+  <!-- noindex,nofollow --><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <title>unicode converter</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="l-wrap">
+
+  <main class="main">
+    <h1>unicode converter</h1>
+    <p class="desc">テキストをユニコードに変換 → 更にユニコードを16進数に変換します。</p>
+    <div class="inner">
+      <h2>text</h2>
+      <textarea name="" cols="120" rows="2" class="unicode"></textarea>
+      <p>converted Unicode</p>
+      <button class="unicode_convert">Convert!</button>
+      <textarea name="" cols="120" rows="2" class="unicode_converted"></textarea>
+    </div>
+    <hr>
+    <div class="inner">
+      <h2>Unicode</h2>
+      <textarea name="" cols="120" rows="2" class="hexadecimal"></textarea>
+      <p>converted Hexadecimal</p>
+      <button class="hexadecimal_convert">Convert!</button>
+      <textarea name="" cols="120" rows="2" class="hexadecimal_converted"></textarea>
+    </div>
+  </main>
+
+</div>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="./assets/js/vender/jquery-3.3.1.min.js"><\/script>');</script>
+<script src="./assets/js/vender/jquery.easing.1.3.js"></script>
+<script src="./assets/js/common.js"></script>
+
+</body>
+</html>

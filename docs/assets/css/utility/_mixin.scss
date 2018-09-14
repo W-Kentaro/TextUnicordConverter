@@ -1,0 +1,5 @@
+// sp用 px > % コンバーター
+@mixin wid($w,$wrap:750){
+  width: $w+px;
+  width: ( $w / $wrap ) * 100%;
+}
