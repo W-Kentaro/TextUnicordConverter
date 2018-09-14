@@ -12,14 +12,18 @@ $(window).on('load', () => {
     $('.hexadecimal').val(converted);
   });
   $('.hexadecimal_convert').on('click', () => {
+
+    let num = $('select[name="number"]').val();
+
     let unicode = $('.hexadecimal').val();
     unicode = unicode.split(',');
 
     let hexadecimal = '';
     for(let i = 0; i < unicode.length; i++){
-      hexadecimal += `${Number(unicode[i]).toString(16)},`;
+      hexadecimal += `${Number(unicode[i]).toString(num)},`;
     }
     hexadecimal = hexadecimal.slice(0, -1);
     $('.hexadecimal_converted').val(hexadecimal);
+    $('.hexadecimal_text').html(`converted ${num}進数`);
   });
 });

@@ -14,7 +14,7 @@
 
   <main class="main">
     <h1>unicode converter</h1>
-    <p class="desc">テキストをユニコードに変換 → 更にユニコードを16進数に変換します。</p>
+    <p class="desc">テキストをユニコードに変換 → 更にユニコードをn進数に変換します。</p>
     <div class="inner">
       <h2>text</h2>
       <textarea name="" cols="120" rows="2" class="unicode"></textarea>
@@ -25,8 +25,13 @@
     <hr>
     <div class="inner">
       <h2>Unicode</h2>
+      <select name="number">
+        <option value="2">2</option>
+        <option value="8">8</option>
+        <option value="16" selected>16</option>
+      </select>
       <textarea name="" cols="120" rows="2" class="hexadecimal"></textarea>
-      <p>converted Hexadecimal</p>
+      <p class="hexadecimal_text">converted 16進数</p>
       <button class="hexadecimal_convert">Convert!</button>
       <textarea name="" cols="120" rows="2" class="hexadecimal_converted"></textarea>
     </div>
