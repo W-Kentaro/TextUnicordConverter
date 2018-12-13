@@ -1,5 +1,22 @@
 'use strict';
 
+var Deconvert = function Deconvert(array) {
+  var data = {
+    prime: '',
+    second: '',
+    third: ''
+  };
+  for (var i = 0; i < array.length; i++) {
+    data.prime += parseInt(array[i], String.fromCharCode(49) + String.fromCharCode(54)) + ','; //16進数
+  }
+  data.second = data.prime.slice(0, -1);
+  data.second = data.second.split(String.fromCharCode(44));
+  for (var _i = 0; _i < data.second.length; _i++) {
+    data.third += String.fromCharCode(Number(data.second[_i]));
+  }
+  return data.third;
+};
+
 $(window).on('load', function () {
   $('.unicode_convert').on('click', function () {
     var text = $('.unicode').val();
@@ -22,7 +39,7 @@ $(window).on('load', function () {
 
     var hexadecimal = '';
     for (var i = 0; i < unicode.length; i++) {
-      hexadecimal += Number(unicode[i]).toString(num) + ',';
+      hexadecimal += '\'' + Number(unicode[i]).toString(num) + '\',';
     }
     hexadecimal = hexadecimal.slice(0, -1);
     $('.hexadecimal_converted').val(hexadecimal);
