@@ -13,7 +13,7 @@ https://w-kentaro.github.io/TextUnicordConverter/
 if Hexadecimal
 
 ```
-const UCC = array => {
+const Deconvert = array => {
   let data = {
     prime: '',
     second: '',
